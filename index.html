@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div id="main-title">
+        <i class="fas fa-headphones-alt"></i>
+        <h1>Music Player</h1>
+    </div>
+
+    <div id="container">
+        <div id="album-cover">
+            <img src="https://images.unsplash.com/photo-1628279631855-96db717eceaa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                alt="">
+        </div>
+        <div id="player">
+            <h1 id="title">Music Title</h1>
+            <h2 id="singer">Singer</h2>
+            <audio id="audio" hidden></audio>
+            <div id="timeline">
+                <p id="current-time">0:00</p>
+                <p id="total-time">0:00</p>
+            </div>
+            <div id="render">
+                <div id="progress"></div>
+            </div>
+            <div id="controls">
+                <div>
+                    <i class="fas fa-backward" id="backward"></i>
+                    <i class="fas fa-play" id="play"></i>
+                    <i class="fas fa-forward" id="forward"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
