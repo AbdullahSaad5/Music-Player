@@ -114,4 +114,9 @@ body {
 #container #player #controls i {
   margin: 0px 15px;
   cursor: pointer;
+}
+#container #player #controls #volume {
+  position: relative;
+  top: -35px;
+  right: -160px;
 }/*# sourceMappingURL=style.css.map */

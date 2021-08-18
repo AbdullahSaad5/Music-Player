@@ -1,6 +1,7 @@
 const playButton = document.getElementById("play");
 const forwardButton = document.getElementById("forward");
 const backButton = document.getElementById("backward");
+const volume = document.getElementById("volume");
 const audio = document.getElementById("audio");
 const currentTime = document.getElementById("current-time");
 const totalTime = document.getElementById("total-time");
@@ -94,6 +95,8 @@ function updateProgress() {
     loadNextSong();
   }
 }
+
+// Event listeners
 playButton.addEventListener("click", () => {
   audio.paused ? playAudio() : pauseAudio();
 });
@@ -110,4 +113,21 @@ render.addEventListener("click", (event) => {
 forwardButton.addEventListener("click", loadNextSong);
 backButton.addEventListener("click", loadPreviousSong);
 
+volume.addEventListener("click", () => {
+  if (audio.volume == 1) {
+    audio.volume = 0;
+    volume.classList.replace("fa-volume-up", "fa-volume-mute");
+  } else if (audio.volume == 0) {
+    audio.volume = 0.33;
+    volume.classList.replace("fa-volume-mute", "fa-volume-off");
+  } else if (audio.volume == 0.33) {
+    audio.volume = 0.66;
+    volume.classList.replace("fa-volume-off", "fa-volume-down");
+  } else if (audio.volume == 0.66) {
+    audio.volume = 1;
+    volume.classList.replace("fa-volume-down", "fa-volume-up");
+  }
+});
+
+// On load
 loadSong();
